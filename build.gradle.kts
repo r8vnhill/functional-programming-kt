@@ -14,11 +14,14 @@ allprojects {
     version = projectVersion
 }
 
+val kotest = libs.kotest
+
 subprojects {
     apply(plugin = "jvm.conventions")
     apply(plugin = detektId)
 
     dependencies {
         detektPlugins("$detektFormattingModule:$detektFormattingVersion")
+        implementation(kotest)
     }
 }
