@@ -16,5 +16,8 @@ dependencyResolutionManagement {    // Gestión de resolución de dependencias
 }
 
 include(
+    ":adt",
+    ":lambdas",
     ":trampoline",
+    ":hof",
 )
