@@ -20,4 +20,5 @@ include(
     ":lambdas",
     ":trampoline",
     ":hof",
+    ":functors",
 )
