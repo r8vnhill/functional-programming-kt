@@ -14,7 +14,7 @@ allprojects {
     version = projectVersion
 }
 
-val kotest = libs.kotest
+val kotest = libs.bundles.kotest
 
 subprojects {
     apply(plugin = "jvm.conventions")
