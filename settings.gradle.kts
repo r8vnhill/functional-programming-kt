@@ -21,4 +21,5 @@ include(
     ":trampoline",
     ":hof",
     ":functors",
+    ":monads",
 )
