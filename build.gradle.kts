@@ -1,4 +1,5 @@
 plugins {
+    id("function-functor")
     id("jvm.conventions")
     alias(libs.plugins.detekt)
 }
