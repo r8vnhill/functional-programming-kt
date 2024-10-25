@@ -22,3 +22,4 @@ include(
     ":functors",
 )
 include("monads")
+include("monads:option")
