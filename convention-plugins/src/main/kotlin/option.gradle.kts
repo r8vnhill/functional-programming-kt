@@ -2,7 +2,7 @@ import tasks.ModuleSetupTask
 
 tasks.register<ModuleSetupTask>("setupOptionModule") {
     description = "Creates the base module and files for the option lesson"
-    module.set("option")
+    module.set("monads:option")
 
     doLast {
         createFiles(
