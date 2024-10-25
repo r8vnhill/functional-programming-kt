@@ -21,3 +21,4 @@ include(
     ":hof",
     ":functors",
 )
+include("monads")
