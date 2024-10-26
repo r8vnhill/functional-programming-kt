@@ -1,4 +1,5 @@
 plugins {
+    id("hof")
     id("function-functor")
     id("monads")
     id("option")
