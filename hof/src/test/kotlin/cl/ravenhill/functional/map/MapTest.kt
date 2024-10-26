@@ -2,18 +2,21 @@ package cl.ravenhill.functional.map
 
 import io.kotest.core.spec.style.FreeSpec
 import io.kotest.matchers.shouldBe
+import io.kotest.property.Arb
+import io.kotest.property.arbitrary.int
+import io.kotest.property.arbitrary.list
+import io.kotest.property.checkAll
 
 private fun double(n: Int): Int = n * 2
 
-private fun square(n: Int): Int = n * n
-
 class MapTest : FreeSpec({
-    "A map function" - {
-        "can double the elements" {
-            map(listOf(1, 2, 3, 4, 5), ::double) shouldBe listOf(2, 4, 6, 8, 10)
-        }
-        "can square the elements" {
-            map(listOf(1, 2, 3, 4, 5), ::square) shouldBe listOf(1, 4, 9, 16, 25)
+    "A list of integers" - {
+        "when mapped with a function that doubles the elements" - {
+            "should return a list which sum is twice the original sum" {
+                checkAll(Arb.list(Arb.int())) { list ->
+                    map(list, ::double).sum() shouldBe list.sum() * 2
+                }
+            }
         }
     }
 })
