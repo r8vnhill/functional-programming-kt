@@ -3,6 +3,7 @@ plugins {
     id("function-functor")
     id("monads")
     id("option")
+    id("either")
     id("jvm.conventions")
     alias(libs.plugins.detekt)
 }
